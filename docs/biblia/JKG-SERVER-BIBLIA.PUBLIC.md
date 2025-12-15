@@ -1,8 +1,8 @@
-# JKG-SERVER — BIBLIA (snapshot 2025-12-15-172300)
+# JKG-SERVER — BIBLIA (snapshot 2025-12-15-175448)
 
 **Hostname:** JKG-SERVER
-**Fecha:** 2025-12-15T17:23:00+01:00
-**IPv4:** 192.168.1.193/24,100.113.186.105/32,172.18.0.1/16,172.20.0.1/16,172.17.0.1/16,172.19.0.1/16,172.21.0.1/16
+**Fecha:** 2025-12-15T17:54:48+01:00
+**IPv4:** [IP-REDACTED]/24,[IP-REDACTED]/32,[IP-REDACTED]/16,[IP-REDACTED]/16,[IP-REDACTED]/16,[IP-REDACTED]/16,[IP-REDACTED]/16
 **IPv6:** fd87:7b42:69e:0:725a:fff:fe4a:bc13/64,fd7a:115c:a1e0::3401:ba86/128
 
 > Modo redactado: intenta ocultar secretos automáticamente.
@@ -22,17 +22,17 @@ Codename:	noble
 ## Uptime / carga / memoria
 
 $ uptime; echo; free -h; echo; vmstat 1 3 2>/dev/null || true
- 17:23:00 up 2 days, 15:00,  3 users,  load average: 0,02, 0,05, 0,05
+ 17:54:48 up 2 days, 15:32,  4 users,  load average: 0,20, 0,11, 0,11
 
                total       usado       libre  compartido   búf/caché  disponible
-Mem:            46Gi       3,3Gi       3,0Gi       203Mi        41Gi        43Gi
+Mem:            46Gi       3,6Gi       2,7Gi       203Mi        41Gi        43Gi
 Inter:         4,0Gi          0B       4,0Gi
 
 procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
  r  b   swpd  libre   búf caché   si   so    bi    bo   in   cs us sy id wa st gu
- 1  0      0 3187980 1268144 42055620    0    0  2316  1216 1334    9  4  4 91  0  0  0
- 0  0      0 3187504 1268144 42055664    0    0     5  1132  715  659  1  2 97  0  0  0
- 0  0      0 3187252 1268144 42055668    0    0     0     0  491  612  1  2 98  0  0  0
+ 6  0      0 2832960 1271452 42131572    0    0  2297  1209 1328    9  4  4 91  0  0  0
+ 0  0      0 2832828 1271452 42131448    0    0     0     8  505  684  1  1 98  0  0  0
+ 0  0      0 2832828 1271452 42131448    0    0     0     4  318  394  0  1 99  0  0  0
 
 
 ## CPU / RAM (detalle)
@@ -55,7 +55,7 @@ Hilo(s) de procesamiento por núcleo:  1
 Núcleo(s) por «socket»:               4
 «Socket(s)»                           1
 Revisión:                             9
-CPU(s) scaling MHz:                   27%
+CPU(s) scaling MHz:                   34%
 CPU MHz máx.:                         3300,0000
 CPU MHz mín.:                         800,0000
 BogoMIPS:                             5399,81
@@ -291,7 +291,7 @@ unused devices: <none>
 
      Intent Bitmap : Internal
 
-       Update Time : Mon Dec 15 17:03:38 2025
+       Update Time : Mon Dec 15 17:31:02 2025
              State : clean 
     Active Devices : 3
    Working Devices : 3
@@ -350,27 +350,27 @@ SMART overall-health self-assessment test result: PASSED
 
 $ ip -br a; echo; ip r; echo; resolvectl status 2>/dev/null | sed -n '1,260p' || cat /etc/resolv.conf
 lo               UNKNOWN        127.0.0.1/8 ::1/128 
-eno1             UP             192.168.1.193/24 fd87:7b42:69e:0:725a:fff:fe4a:bc13/64 fe80::725a:fff:fe4a:bc13/64 
-tailscale0       UNKNOWN        100.113.186.105/32 fd7a:115c:a1e0::3401:ba86/128 fe80::4f74:f585:382b:923a/64 
-br-b1dc2e5340d9  DOWN           172.18.0.1/16 
-br-ce54daa5efd6  UP             172.20.0.1/16 fe80::4dd:f9ff:fe9c:bb9f/64 
-docker0          UP             172.17.0.1/16 fe80::9458:efff:fef8:2dcc/64 
-br-7b03fbe48be0  DOWN           172.19.0.1/16 
+eno1             UP             [IP-REDACTED]/24 fd87:7b42:69e:0:725a:fff:fe4a:bc13/64 fe80::725a:fff:fe4a:bc13/64 
+tailscale0       UNKNOWN        [IP-REDACTED]/32 fd7a:115c:a1e0::3401:ba86/128 fe80::4f74:f585:382b:923a/64 
+br-b1dc2e5340d9  DOWN           [IP-REDACTED]/16 
+br-ce54daa5efd6  UP             [IP-REDACTED]/16 fe80::4dd:f9ff:fe9c:bb9f/64 
+docker0          UP             [IP-REDACTED]/16 fe80::9458:efff:fef8:2dcc/64 
+br-7b03fbe48be0  DOWN           [IP-REDACTED]/16 
 vethd2bda24@if2  UP             fe80::e8ff:11ff:fe32:98af/64 
 vethcdd5552@if2  UP             fe80::b025:66ff:fe29:eb91/64 
 veth2625466@if2  UP             fe80::a493:d8ff:fe9d:5db0/64 
 veth3d2a5db@if2  UP             fe80::c418:78ff:fea2:81d7/64 
-br-799851584ab4  UP             172.21.0.1/16 fe80::501f:afff:feea:c47d/64 
+br-799851584ab4  UP             [IP-REDACTED]/16 fe80::501f:afff:feea:c47d/64 
 vethf9e3f25@if2  UP             fe80::b0c0:faff:fe6c:9fd3/64 
 veth6fd7b58@if2  UP             fe80::b8bd:4dff:fe1c:8b94/64 
 
-default via 192.168.1.1 dev eno1 proto static 
-172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
-172.18.0.0/16 dev br-b1dc2e5340d9 proto kernel scope link src 172.18.0.1 linkdown 
-172.19.0.0/16 dev br-7b03fbe48be0 proto kernel scope link src 172.19.0.1 linkdown 
-172.20.0.0/16 dev br-ce54daa5efd6 proto kernel scope link src 172.20.0.1 
-172.21.0.0/16 dev br-799851584ab4 proto kernel scope link src 172.21.0.1 
-192.168.1.0/24 dev eno1 proto kernel scope link src 192.168.1.193 
+default via [IP-REDACTED] dev eno1 proto static 
+[IP-REDACTED]/16 dev docker0 proto kernel scope link src [IP-REDACTED] 
+[IP-REDACTED]/16 dev br-b1dc2e5340d9 proto kernel scope link src [IP-REDACTED] linkdown 
+[IP-REDACTED]/16 dev br-7b03fbe48be0 proto kernel scope link src [IP-REDACTED] linkdown 
+[IP-REDACTED]/16 dev br-ce54daa5efd6 proto kernel scope link src [IP-REDACTED] 
+[IP-REDACTED]/16 dev br-799851584ab4 proto kernel scope link src [IP-REDACTED] 
+[IP-REDACTED]/24 dev eno1 proto kernel scope link src [IP-REDACTED] 
 
 Global
            Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
@@ -388,8 +388,8 @@ Current DNS Server: 1.1.1.1
 Link 3 (tailscale0)
     Current Scopes: DNS
          Protocols: -DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
-Current DNS Server: 100.100.100.100
-       DNS Servers: 100.100.100.100
+Current DNS Server: [IP-REDACTED]
+       DNS Servers: [IP-REDACTED]
         DNS Domain: tail4a3829.ts.net ~0.e.1.a.c.5.1.1.a.7.d.f.ip6.arpa
                     ~100.100.in-addr.arpa ~101.100.in-addr.arpa
                     ~102.100.in-addr.arpa ~103.100.in-addr.arpa
@@ -473,42 +473,42 @@ Link 38 (veth6fd7b58)
 
 $ ss -lntup 2>/dev/null | sed -n '1,260p' || true
 Netid State  Recv-Q Send-Q                        Local Address:Port  Peer Address:PortProcess                                                                                                                                   
-udp   UNCONN 0      0                             192.168.1.193:3702       0.0.0.0:*    users:(("python3",pid=1639,fd=9))                                                                                                        
+udp   UNCONN 0      0                             [IP-REDACTED]:3702       0.0.0.0:*    users:(("python3",pid=1639,fd=9))                                                                                                        
 udp   UNCONN 0      0                           239.255.255.250:3702       0.0.0.0:*    users:(("python3",pid=1639,fd=7))                                                                                                        
 udp   UNCONN 0      0                                   0.0.0.0:5353       0.0.0.0:*    users:(("avahi-daemon",pid=862,fd=12))                                                                                                   
-udp   UNCONN 0      1920                                0.0.0.0:41641      0.0.0.0:*    users:(("tailscaled",pid=1145,fd=18))                                                                                                    
+udp   UNCONN 0      0                                   0.0.0.0:41641      0.0.0.0:*    users:(("tailscaled",pid=1145,fd=18))                                                                                                    
 udp   UNCONN 0      0                                   0.0.0.0:10000      0.0.0.0:*    users:(("perl",pid=13476,fd=7))                                                                                                          
 udp   UNCONN 0      0                                   0.0.0.0:55970      0.0.0.0:*    users:(("avahi-daemon",pid=862,fd=14))                                                                                                   
 udp   UNCONN 0      0                                   0.0.0.0:56996      0.0.0.0:*    users:(("python3",pid=1639,fd=8))                                                                                                        
 udp   UNCONN 0      0                                 127.0.0.1:53         0.0.0.0:*    users:(("dnsmasq",pid=551836,fd=6))                                                                                                      
-udp   UNCONN 0      0                             192.168.1.193:53         0.0.0.0:*    users:(("dnsmasq",pid=551836,fd=4))                                                                                                      
+udp   UNCONN 0      0                             [IP-REDACTED]:53         0.0.0.0:*    users:(("dnsmasq",pid=551836,fd=4))                                                                                                      
 udp   UNCONN 0      0                                127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=387236,fd=16))                                                                                             
 udp   UNCONN 0      0                             127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=387236,fd=14))                                                                                             
-udp   UNCONN 0      0                            172.21.255.255:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=42))                                                                                                          
-udp   UNCONN 0      0                                172.21.0.1:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=41))                                                                                                          
-udp   UNCONN 0      0                            172.20.255.255:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=38))                                                                                                          
-udp   UNCONN 0      0                                172.20.0.1:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=37))                                                                                                          
-udp   UNCONN 0      0                            172.19.255.255:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=34))                                                                                                          
-udp   UNCONN 0      0                                172.19.0.1:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=33))                                                                                                          
-udp   UNCONN 0      0                            172.18.255.255:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=30))                                                                                                          
-udp   UNCONN 0      0                                172.18.0.1:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=29))                                                                                                          
-udp   UNCONN 0      0                            172.17.255.255:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=26))                                                                                                          
-udp   UNCONN 0      0                                172.17.0.1:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=25))                                                                                                          
-udp   UNCONN 0      0                             192.168.1.255:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=19))                                                                                                          
-udp   UNCONN 0      0                             192.168.1.193:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=18))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=42))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=41))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=38))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=37))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=34))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=33))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=30))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=29))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=26))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=25))                                                                                                          
+udp   UNCONN 0      0                             [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=19))                                                                                                          
+udp   UNCONN 0      0                             [IP-REDACTED]:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=18))                                                                                                          
 udp   UNCONN 0      0                                   0.0.0.0:137        0.0.0.0:*    users:(("nmbd",pid=1375,fd=16))                                                                                                          
-udp   UNCONN 0      0                            172.21.255.255:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=44))                                                                                                          
-udp   UNCONN 0      0                                172.21.0.1:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=43))                                                                                                          
-udp   UNCONN 0      0                            172.20.255.255:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=40))                                                                                                          
-udp   UNCONN 0      0                                172.20.0.1:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=39))                                                                                                          
-udp   UNCONN 0      0                            172.19.255.255:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=36))                                                                                                          
-udp   UNCONN 0      0                                172.19.0.1:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=35))                                                                                                          
-udp   UNCONN 0      0                            172.18.255.255:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=32))                                                                                                          
-udp   UNCONN 0      0                                172.18.0.1:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=31))                                                                                                          
-udp   UNCONN 0      0                            172.17.255.255:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=28))                                                                                                          
-udp   UNCONN 0      0                                172.17.0.1:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=27))                                                                                                          
-udp   UNCONN 0      0                             192.168.1.255:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=21))                                                                                                          
-udp   UNCONN 0      0                             192.168.1.193:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=20))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=44))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=43))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=40))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=39))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=36))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=35))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=32))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=31))                                                                                                          
+udp   UNCONN 0      0                            [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=28))                                                                                                          
+udp   UNCONN 0      0                                [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=27))                                                                                                          
+udp   UNCONN 0      0                             [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=21))                                                                                                          
+udp   UNCONN 0      0                             [IP-REDACTED]:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=20))                                                                                                          
 udp   UNCONN 0      0                                   0.0.0.0:138        0.0.0.0:*    users:(("nmbd",pid=1375,fd=17))                                                                                                          
 udp   UNCONN 0      0           [fe80::725a:fff:fe4a:bc13]%eno1:3702          [::]:*    users:(("python3",pid=1639,fd=13))                                                                                                       
 udp   UNCONN 0      0                            [ff02::c]%eno1:3702          [::]:*    users:(("python3",pid=1639,fd=11))                                                                                                       
@@ -525,19 +525,19 @@ tcp   LISTEN 0      128                                 0.0.0.0:44322      0.0.0
 tcp   LISTEN 0      4096                                0.0.0.0:9443       0.0.0.0:*    users:(("docker-proxy",pid=3463,fd=7))                                                                                                   
 tcp   LISTEN 0      4096                             127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=387236,fd=17))                                                                                             
 tcp   LISTEN 0      4096                                0.0.0.0:10000      0.0.0.0:*    users:(("perl",pid=13476,fd=5))                                                                                                          
-tcp   LISTEN 0      4096                        100.113.186.105:50363      0.0.0.0:*    users:(("tailscaled",pid=1145,fd=26))                                                                                                    
+tcp   LISTEN 0      4096                        [IP-REDACTED]:50363      0.0.0.0:*    users:(("tailscaled",pid=1145,fd=26))                                                                                                    
 tcp   LISTEN 0      4096                          127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=387236,fd=15))                                                                                             
-tcp   LISTEN 0      32                            192.168.1.193:53         0.0.0.0:*    users:(("dnsmasq",pid=551836,fd=5))                                                                                                      
+tcp   LISTEN 0      32                            [IP-REDACTED]:53         0.0.0.0:*    users:(("dnsmasq",pid=551836,fd=5))                                                                                                      
 tcp   LISTEN 0      511                                 0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=828997,fd=5),("nginx",pid=828996,fd=5),("nginx",pid=828995,fd=5),("nginx",pid=828994,fd=5),("nginx",pid=828993,fd=5))
-tcp   LISTEN 0      4096                                0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1315,fd=3),("systemd",pid=1,fd=108))                                                                                  
+tcp   LISTEN 0      4096                                0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1315,fd=3),("systemd",pid=1,fd=151))                                                                                  
 tcp   LISTEN 0      50                                  0.0.0.0:139        0.0.0.0:*    users:(("smbd",pid=1436,fd=32))                                                                                                          
 tcp   LISTEN 0      50                                  0.0.0.0:445        0.0.0.0:*    users:(("smbd",pid=1436,fd=31))                                                                                                          
 tcp   LISTEN 0      511                                 0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=828997,fd=7),("nginx",pid=828996,fd=7),("nginx",pid=828995,fd=7),("nginx",pid=828994,fd=7),("nginx",pid=828993,fd=7))
 tcp   LISTEN 0      4096                                0.0.0.0:8000       0.0.0.0:*    users:(("docker-proxy",pid=3411,fd=7))                                                                                                   
 tcp   LISTEN 0      4096                                0.0.0.0:8082       0.0.0.0:*    users:(("docker-proxy",pid=3354,fd=7))                                                                                                   
 tcp   LISTEN 0      5                                   0.0.0.0:4330       0.0.0.0:*    users:(("pmlogger",pid=2060,fd=7))                                                                                                       
-tcp   LISTEN 0      5                             192.168.1.193:5357       0.0.0.0:*    users:(("python3",pid=1639,fd=10))                                                                                                       
-tcp   LISTEN 0      5                                 127.0.0.1:558        0.0.0.0:*    users:(("stats.pl",pid=21554,fd=3))                                                                                                      
+tcp   LISTEN 0      5                             [IP-REDACTED]:5357       0.0.0.0:*    users:(("python3",pid=1639,fd=10))                                                                                                       
+tcp   LISTEN 0      5                                 127.0.0.1:555        0.0.0.0:*    users:(("stats.pl",pid=853902,fd=3))                                                                                                     
 tcp   LISTEN 0      32                                127.0.0.1:53         0.0.0.0:*    users:(("dnsmasq",pid=551836,fd=7))                                                                                                      
 tcp   LISTEN 0      4096                              127.0.0.1:8069       0.0.0.0:*    users:(("docker-proxy",pid=244438,fd=7))                                                                                                 
 tcp   LISTEN 0      4096                              127.0.0.1:8072       0.0.0.0:*    users:(("docker-proxy",pid=244455,fd=7))                                                                                                 
@@ -546,9 +546,9 @@ tcp   LISTEN 0      128                                    [::]:44323         [:
 tcp   LISTEN 0      128                                    [::]:44322         [::]:*    users:(("pmproxy",pid=1424,fd=14))                                                                                                       
 tcp   LISTEN 0      4096                                   [::]:9443          [::]:*    users:(("docker-proxy",pid=3471,fd=7))                                                                                                   
 tcp   LISTEN 0      4096                                   [::]:10000         [::]:*    users:(("perl",pid=13476,fd=6))                                                                                                          
-tcp   LISTEN 0      4096                                      *:9090             *:*    users:(("systemd",pid=1,fd=314))                                                                                                         
+tcp   LISTEN 0      4096                                      *:9090             *:*    users:(("cockpit-tls",pid=852818,fd=3),("systemd",pid=1,fd=351))                                                                         
 tcp   LISTEN 0      511                                    [::]:80            [::]:*    users:(("nginx",pid=828997,fd=6),("nginx",pid=828996,fd=6),("nginx",pid=828995,fd=6),("nginx",pid=828994,fd=6),("nginx",pid=828993,fd=6))
-tcp   LISTEN 0      4096                                   [::]:22            [::]:*    users:(("sshd",pid=1315,fd=4),("systemd",pid=1,fd=115))                                                                                  
+tcp   LISTEN 0      4096                                   [::]:22            [::]:*    users:(("sshd",pid=1315,fd=4),("systemd",pid=1,fd=155))                                                                                  
 tcp   LISTEN 0      50                                     [::]:139           [::]:*    users:(("smbd",pid=1436,fd=30))                                                                                                          
 tcp   LISTEN 0      50                                     [::]:445           [::]:*    users:(("smbd",pid=1436,fd=29))                                                                                                          
 tcp   LISTEN 0      511                                    [::]:443           [::]:*    users:(("nginx",pid=828997,fd=8),("nginx",pid=828996,fd=8),("nginx",pid=828995,fd=8),("nginx",pid=828994,fd=8),("nginx",pid=828993,fd=8))
@@ -579,34 +579,34 @@ Legend: LOAD   → Reflects whether the unit definition was properly loaded.
 4 loaded units listed.
 
 NEXT                                  LEFT LAST                               PASSED UNIT                           ACTIVATES
-Mon 2025-12-15 17:23:26 CET            23s Mon 2025-12-15 17:22:56 CET        6s ago jkg-edge-watchdog.timer        jkg-edge-watchdog.service
-Mon 2025-12-15 17:23:56 CET            53s Mon 2025-12-15 17:22:56 CET        6s ago jkg-cf-failover-check.timer    jkg-cf-failover-check.service
-Mon 2025-12-15 17:25:00 CET       1min 57s Mon 2025-12-15 16:55:02 CET     28min ago pmlogger_check.timer           pmlogger_check.service
-Mon 2025-12-15 17:25:10 CET        2min 7s Mon 2025-12-15 16:55:12 CET     27min ago pmlogger_farm_check.timer      pmlogger_farm_check.service
-Mon 2025-12-15 17:28:00 CET       4min 57s Mon 2025-12-15 16:58:01 CET     25min ago pmie_check.timer               pmie_check.service
-Mon 2025-12-15 17:28:10 CET           5min Mon 2025-12-15 16:58:11 CET     24min ago pmie_farm_check.timer          pmie_farm_check.service
-Mon 2025-12-15 17:30:00 CET           6min Mon 2025-12-15 17:20:02 CET   3min 0s ago sysstat-collect.timer          sysstat-collect.service
-Mon 2025-12-15 17:46:28 CET          23min Mon 2025-12-15 16:29:16 CET     53min ago fwupd-refresh.timer            fwupd-refresh.service
-Mon 2025-12-15 23:01:29 CET       5h 38min Mon 2025-12-15 08:27:40 CET        8h ago apt-daily.timer                apt-daily.service
+Mon 2025-12-15 17:54:52 CET             1s Mon 2025-12-15 17:54:22 CET       28s ago jkg-edge-watchdog.timer        jkg-edge-watchdog.service
+Mon 2025-12-15 17:55:00 CET             9s Mon 2025-12-15 17:25:01 CET     29min ago pmlogger_check.timer           pmlogger_check.service
+Mon 2025-12-15 17:55:10 CET            19s Mon 2025-12-15 17:25:11 CET     29min ago pmlogger_farm_check.timer      pmlogger_farm_check.service
+Mon 2025-12-15 17:55:16 CET            25s Mon 2025-12-15 17:54:16 CET       34s ago jkg-cf-failover-check.timer    jkg-cf-failover-check.service
+Mon 2025-12-15 17:58:00 CET        3min 9s Mon 2025-12-15 17:28:04 CET     26min ago pmie_check.timer               pmie_check.service
+Mon 2025-12-15 17:58:10 CET       3min 19s Mon 2025-12-15 17:28:12 CET     26min ago pmie_farm_check.timer          pmie_farm_check.service
+Mon 2025-12-15 18:00:00 CET           5min Mon 2025-12-15 17:50:00 CET  4min 50s ago sysstat-collect.timer          sysstat-collect.service
+Mon 2025-12-15 18:30:24 CET          35min Mon 2025-12-15 17:41:16 CET     13min ago fwupd-refresh.timer            fwupd-refresh.service
+Mon 2025-12-15 22:13:48 CET       4h 18min Mon 2025-12-15 08:27:40 CET        9h ago apt-daily.timer                apt-daily.service
 Tue 2025-12-16 00:00:00 CET             6h Mon 2025-12-15 00:00:00 CET       17h ago dpkg-db-backup.timer           dpkg-db-backup.service
 Tue 2025-12-16 00:00:00 CET             6h Mon 2025-12-15 00:00:00 CET       17h ago logrotate.timer                logrotate.service
 Tue 2025-12-16 00:07:00 CET             6h Mon 2025-12-15 00:07:02 CET       17h ago sysstat-summary.timer          sysstat-summary.service
 Tue 2025-12-16 00:08:00 CET             6h Mon 2025-12-15 00:08:00 CET       17h ago pmie_daily.timer               pmie_daily.service
 Tue 2025-12-16 00:10:00 CET             6h Mon 2025-12-15 00:10:00 CET       17h ago pmlogger_daily.timer           pmlogger_daily.service
-Tue 2025-12-16 02:27:39 CET             9h Mon 2025-12-15 02:27:39 CET       14h ago update-notifier-download.timer update-notifier-download.service
-Tue 2025-12-16 02:32:46 CET             9h Mon 2025-12-15 14:32:46 CET  2h 50min ago nextcloud-files-scan.timer     nextcloud-files-scan.service
-Tue 2025-12-16 02:37:37 CET             9h Mon 2025-12-15 02:37:37 CET       14h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+Tue 2025-12-16 02:27:39 CET             8h Mon 2025-12-15 02:27:39 CET       15h ago update-notifier-download.timer update-notifier-download.service
+Tue 2025-12-16 02:32:46 CET             8h Mon 2025-12-15 14:32:46 CET  3h 22min ago nextcloud-files-scan.timer     nextcloud-files-scan.service
+Tue 2025-12-16 02:37:37 CET             8h Mon 2025-12-15 02:37:37 CET       15h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
 Tue 2025-12-16 03:15:00 CET             9h Mon 2025-12-15 03:15:00 CET       14h ago jkg-odoo-compliance.timer      jkg-odoo-compliance.service
-Tue 2025-12-16 05:18:06 CET            11h Mon 2025-12-15 16:17:54 CET   1h 5min ago motd-news.timer                motd-news.service
-Tue 2025-12-16 05:57:20 CET            12h Mon 2025-12-15 08:34:07 CET        8h ago mdcheck_continue.timer         mdcheck_continue.service
-Tue 2025-12-16 06:06:26 CET            12h Mon 2025-12-15 06:51:30 CET       10h ago apt-daily-upgrade.timer        apt-daily-upgrade.service
-Tue 2025-12-16 06:24:52 CET            13h Mon 2025-12-15 16:52:35 CET     30min ago certbot.timer                  certbot.service
-Tue 2025-12-16 10:41:52 CET            17h Mon 2025-12-15 12:42:13 CET  4h 40min ago mdmonitor-oneshot.timer        mdmonitor-oneshot.service
-Tue 2025-12-16 11:16:41 CET            17h Mon 2025-12-15 09:55:17 CET        7h ago man-db.timer                   man-db.service
-Sat 2025-12-20 05:39:08 CET         4 days Mon 2025-12-08 09:29:38 CET             - update-notifier-motd.timer     update-notifier-motd.service
-Sun 2025-12-21 03:10:11 CET         5 days Sun 2025-12-14 03:10:11 CET 1 day 14h ago e2scrub_all.timer              e2scrub_all.service
-Mon 2025-12-22 00:23:39 CET         6 days Mon 2025-12-15 00:48:43 CET       16h ago fstrim.timer                   fstrim.service
-Sun 2026-01-04 16:40:58 CET 2 weeks 5 days Sun 2025-12-07 21:06:33 CET             - mdcheck_start.timer            mdcheck_start.service
+Tue 2025-12-16 03:28:34 CET             9h Mon 2025-12-15 16:52:35 CET   1h 2min ago certbot.timer                  certbot.service
+Tue 2025-12-16 04:46:00 CET            10h Mon 2025-12-15 09:55:17 CET        7h ago man-db.timer                   man-db.service
+Tue 2025-12-16 06:46:38 CET            12h Mon 2025-12-15 06:51:30 CET       11h ago apt-daily-upgrade.timer        apt-daily-upgrade.service
+Tue 2025-12-16 11:04:43 CET            17h Mon 2025-12-15 08:34:07 CET        9h ago mdcheck_continue.timer         mdcheck_continue.service
+Tue 2025-12-16 11:37:04 CET            17h Mon 2025-12-15 16:17:54 CET  1h 36min ago motd-news.timer                motd-news.service
+Tue 2025-12-16 15:14:07 CET            21h Mon 2025-12-15 12:42:13 CET  5h 12min ago mdmonitor-oneshot.timer        mdmonitor-oneshot.service
+Wed 2025-12-17 22:56:28 CET         2 days Mon 2025-12-08 09:29:38 CET             - update-notifier-motd.timer     update-notifier-motd.service
+Sun 2025-12-21 03:10:42 CET         5 days Sun 2025-12-14 03:10:11 CET 1 day 14h ago e2scrub_all.timer              e2scrub_all.service
+Mon 2025-12-22 01:14:30 CET         6 days Mon 2025-12-15 00:48:43 CET       17h ago fstrim.timer                   fstrim.service
+Sun 2026-01-04 03:55:13 CET 2 weeks 5 days Sun 2025-12-07 21:06:33 CET             - mdcheck_start.timer            mdcheck_start.service
 -                                        - -                                       - apport-autoreport.timer        apport-autoreport.service
 -                                        - -                                       - snapd.snap-repair.timer        snapd.snap-repair.service
 -                                        - -                                       - ua-timer.timer                 ua-timer.service
@@ -617,226 +617,226 @@ Sun 2026-01-04 16:40:58 CET 2 weeks 5 days Sun 2025-12-07 21:06:33 CET          
 ## Logs críticos (último arranque)
 
 $ journalctl -p err..alert -b --no-pager | tail -n 220 || true
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:07:45.498276,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:07:45.498376,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:07:45.498467,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:07:45.498554,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:07:45.498645,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:07:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:07:48 JKG-SERVER (python3)[845345]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:07:53 JKG-SERVER (python3)[845352]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:07:58 JKG-SERVER (python3)[845359]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:04 JKG-SERVER (python3)[845368]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:09 JKG-SERVER (python3)[845375]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:14 JKG-SERVER (python3)[845388]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:19 JKG-SERVER (python3)[845401]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:25 JKG-SERVER (python3)[845407]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:30 JKG-SERVER (python3)[845414]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:35 JKG-SERVER (python3)[845422]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:40 JKG-SERVER (python3)[845429]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:46 JKG-SERVER (python3)[845436]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:51 JKG-SERVER (python3)[845447]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:08:56 JKG-SERVER (python3)[845455]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:01 JKG-SERVER (python3)[845463]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:07 JKG-SERVER (python3)[845469]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:12 JKG-SERVER (python3)[845477]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:17 JKG-SERVER (python3)[845490]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:22 JKG-SERVER (python3)[845503]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:28 JKG-SERVER (python3)[845509]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:33 JKG-SERVER (python3)[845517]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:38 JKG-SERVER (python3)[845524]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:43 JKG-SERVER (python3)[845531]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:49 JKG-SERVER (python3)[845542]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:54 JKG-SERVER (python3)[845551]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:09:59 JKG-SERVER (python3)[845557]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:04 JKG-SERVER (python3)[845610]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:10 JKG-SERVER (python3)[845619]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:15 JKG-SERVER (python3)[845628]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:20 JKG-SERVER (python3)[845778]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:25 JKG-SERVER (python3)[845785]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:31 JKG-SERVER (python3)[845791]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:36 JKG-SERVER (python3)[845800]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:41 JKG-SERVER (python3)[845806]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:46 JKG-SERVER (python3)[845813]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:52 JKG-SERVER (python3)[845821]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:10:57 JKG-SERVER (python3)[845833]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:02 JKG-SERVER (python3)[845841]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:07 JKG-SERVER (python3)[845847]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:13 JKG-SERVER (python3)[845854]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:18 JKG-SERVER (python3)[845862]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:23 JKG-SERVER (python3)[845880]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:28 JKG-SERVER (python3)[845886]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:34 JKG-SERVER (python3)[845894]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:39 JKG-SERVER (python3)[845902]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:44 JKG-SERVER (python3)[845926]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:49 JKG-SERVER (python3)[845932]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:11:55 JKG-SERVER (python3)[845942]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:00 JKG-SERVER (python3)[845953]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:05 JKG-SERVER (python3)[845961]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:10 JKG-SERVER (python3)[845967]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:16 JKG-SERVER (python3)[845975]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:21 JKG-SERVER (python3)[845982]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:26 JKG-SERVER (python3)[846000]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:31 JKG-SERVER (python3)[846007]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:37 JKG-SERVER (python3)[846014]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:42 JKG-SERVER (python3)[846022]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:47 JKG-SERVER (python3)[846042]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:52 JKG-SERVER (python3)[846049]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:12:58 JKG-SERVER (python3)[846058]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:03 JKG-SERVER (python3)[846071]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:08 JKG-SERVER (python3)[846077]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:13 JKG-SERVER (python3)[846084]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:19 JKG-SERVER (python3)[846091]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:24 JKG-SERVER (python3)[846101]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:29 JKG-SERVER (python3)[846120]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:34 JKG-SERVER (python3)[846128]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:40 JKG-SERVER (python3)[846135]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:45 JKG-SERVER (python3)[846142]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:50 JKG-SERVER (python3)[846148]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:13:55 JKG-SERVER (python3)[846155]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:01 JKG-SERVER (python3)[846164]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:06 JKG-SERVER (python3)[846178]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:11 JKG-SERVER (python3)[846184]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:16 JKG-SERVER (python3)[846191]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:22 JKG-SERVER (python3)[846198]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:27 JKG-SERVER (python3)[846205]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:32 JKG-SERVER (python3)[846223]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:37 JKG-SERVER (python3)[846230]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:43 JKG-SERVER (python3)[846237]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:48 JKG-SERVER (python3)[846244]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:53 JKG-SERVER (python3)[846250]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:14:58 JKG-SERVER (python3)[846257]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:04 JKG-SERVER (python3)[846313]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:09 JKG-SERVER (python3)[846325]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:14 JKG-SERVER (python3)[846332]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:19 JKG-SERVER (python3)[846338]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:25 JKG-SERVER (python3)[846478]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:30 JKG-SERVER (python3)[846485]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:35 JKG-SERVER (python3)[846504]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:40 JKG-SERVER (python3)[846510]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:46 JKG-SERVER (python3)[846517]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:51 JKG-SERVER (python3)[846524]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:15:56 JKG-SERVER (python3)[846531]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:01 JKG-SERVER (python3)[846539]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:07 JKG-SERVER (python3)[846551]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:12 JKG-SERVER (python3)[846559]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:17 JKG-SERVER (python3)[846566]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:22 JKG-SERVER (python3)[846572]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:28 JKG-SERVER (python3)[846579]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:33 JKG-SERVER (python3)[846586]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:38 JKG-SERVER (python3)[846605]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:43 JKG-SERVER (python3)[846613]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:49 JKG-SERVER (python3)[846620]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:54 JKG-SERVER (python3)[846628]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:16:59 JKG-SERVER (python3)[846634]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:04 JKG-SERVER (python3)[846646]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:10 JKG-SERVER (python3)[846657]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:15 JKG-SERVER (python3)[846667]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:20 JKG-SERVER (python3)[846673]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:25 JKG-SERVER (python3)[846679]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:31 JKG-SERVER (python3)[846685]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:36 JKG-SERVER (python3)[846693]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:41 JKG-SERVER (python3)[846712]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:46 JKG-SERVER (python3)[846732]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:52 JKG-SERVER (python3)[846738]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:17:57 JKG-SERVER (python3)[846746]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:02 JKG-SERVER (python3)[846754]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:07 JKG-SERVER (python3)[846760]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:13 JKG-SERVER (python3)[846768]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:18 JKG-SERVER (python3)[846781]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:23 JKG-SERVER (python3)[846787]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:28 JKG-SERVER (python3)[846793]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:34 JKG-SERVER (python3)[846800]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:39 JKG-SERVER (python3)[846808]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:44 JKG-SERVER (python3)[846826]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:49 JKG-SERVER (python3)[846833]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:18:55 JKG-SERVER (python3)[846841]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:00 JKG-SERVER (python3)[847013]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:05 JKG-SERVER (python3)[847615]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:10 JKG-SERVER (python3)[847628]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:15 JKG-SERVER (python3)[847640]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:21 JKG-SERVER (python3)[847648]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:26 JKG-SERVER (python3)[847655]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:31 JKG-SERVER (python3)[847661]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:36 JKG-SERVER (python3)[847668]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:42 JKG-SERVER (python3)[847675]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:47 JKG-SERVER (python3)[847686]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:52 JKG-SERVER (python3)[847701]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:19:57 JKG-SERVER (python3)[847708]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:02 JKG-SERVER (python3)[847762]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:08 JKG-SERVER (python3)[847772]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:13 JKG-SERVER (python3)[847779]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:18 JKG-SERVER (python3)[847791]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:23 JKG-SERVER (python3)[847918]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:29 JKG-SERVER (python3)[848289]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:34 JKG-SERVER (python3)[848297]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:39 JKG-SERVER (python3)[848303]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:44 JKG-SERVER (python3)[848310]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:50 JKG-SERVER (python3)[848328]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:20:55 JKG-SERVER (python3)[848336]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:00 JKG-SERVER (python3)[848343]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:05 JKG-SERVER (python3)[848351]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:11 JKG-SERVER (python3)[848357]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:16 JKG-SERVER (python3)[848365]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:21 JKG-SERVER (python3)[848377]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:26 JKG-SERVER (python3)[848383]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:32 JKG-SERVER (python3)[848390]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:37 JKG-SERVER (python3)[848398]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:42 JKG-SERVER (python3)[848405]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:47 JKG-SERVER (python3)[848413]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:53 JKG-SERVER (python3)[848421]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:21:58 JKG-SERVER (python3)[848439]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:03 JKG-SERVER (python3)[848448]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:08 JKG-SERVER (python3)[848454]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:14 JKG-SERVER (python3)[848461]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:19 JKG-SERVER (python3)[848468]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:24 JKG-SERVER (python3)[848493]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:29 JKG-SERVER (python3)[848538]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:35 JKG-SERVER (python3)[848568]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:40 JKG-SERVER (python3)[848577]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:22:45.509004,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:22:45.509201,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:22:45.509314,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:22:45.509402,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:22:45.509490,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:22:45.509578,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
-dic 15 17:22:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
-dic 15 17:22:45 JKG-SERVER (python3)[848599]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:50 JKG-SERVER (python3)[848606]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:22:56 JKG-SERVER (python3)[848615]: odoo.service: Failed to determine user credentials: No such process
-dic 15 17:23:01 JKG-SERVER (python3)[848710]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:38:31 JKG-SERVER smbd[852598]: [2025/12/15 17:38:31.259002,  0] lib/param/loadparm.c:1957(lpcfg_do_service_parameter)
+dic 15 17:38:31 JKG-SERVER smbd[852598]:   Global parameter pam password change found in service section!
+dic 15 17:38:31 JKG-SERVER smbd[852598]: [2025/12/15 17:38:31.259038,  0] lib/param/loadparm.c:1957(lpcfg_do_service_parameter)
+dic 15 17:38:31 JKG-SERVER smbd[852598]:   Global parameter map to guest found in service section!
+dic 15 17:38:31 JKG-SERVER smbd[852598]: [2025/12/15 17:38:31.259079,  0] lib/param/loadparm.c:1957(lpcfg_do_service_parameter)
+dic 15 17:38:31 JKG-SERVER smbd[852598]:   Global parameter usershare allow guests found in service section!
+dic 15 17:38:31 JKG-SERVER smbd[852598]: [2025/12/15 17:38:31.269189,  0] source3/param/loadparm.c:4693(widelinks_warning)
+dic 15 17:38:31 JKG-SERVER smbd[852598]:   widelinks_warning: Share 'Empresa' has wide links and SMB1 unix extensions enabled. These parameters are incompatible. Wide links will be disabled for this share.
+dic 15 17:38:33 JKG-SERVER (python3)[852603]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:38:38 JKG-SERVER (python3)[852623]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:38:43 JKG-SERVER (python3)[852630]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:38:49 JKG-SERVER (python3)[852636]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:38:54 JKG-SERVER (python3)[852643]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:38:59 JKG-SERVER (python3)[852650]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:04 JKG-SERVER (python3)[852659]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:10 JKG-SERVER (python3)[852666]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:15 JKG-SERVER (python3)[852679]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:20 JKG-SERVER (python3)[852685]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:25 JKG-SERVER (python3)[852692]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:31 JKG-SERVER (python3)[852699]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:36 JKG-SERVER (python3)[852707]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:41 JKG-SERVER (python3)[852726]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:46 JKG-SERVER (python3)[852733]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:52 JKG-SERVER (python3)[852739]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:39:57 JKG-SERVER (python3)[852747]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:02 JKG-SERVER (python3)[852801]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:07 JKG-SERVER (python3)[852812]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:13 JKG-SERVER (python3)[852838]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:18 JKG-SERVER (python3)[852905]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:23 JKG-SERVER (python3)[852918]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:28 JKG-SERVER (python3)[852925]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:34 JKG-SERVER (python3)[853065]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:39 JKG-SERVER (python3)[853622]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:44 JKG-SERVER (python3)[853941]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:49 JKG-SERVER (python3)[854180]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:40:55 JKG-SERVER (python3)[854754]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:00 JKG-SERVER (python3)[854769]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:05 JKG-SERVER (python3)[854778]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:10 JKG-SERVER (python3)[854793]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:15 JKG-SERVER (python3)[855205]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:21 JKG-SERVER (python3)[855572]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:26 JKG-SERVER (python3)[855764]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:31 JKG-SERVER (python3)[855790]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:36 JKG-SERVER (python3)[856567]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:41 JKG-SERVER (python3)[856913]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:47 JKG-SERVER (python3)[856923]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:52 JKG-SERVER (python3)[856941]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:41:57 JKG-SERVER (python3)[856948]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:02 JKG-SERVER (python3)[856957]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:08 JKG-SERVER (python3)[856964]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:13 JKG-SERVER (python3)[856970]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:18 JKG-SERVER (python3)[856982]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:23 JKG-SERVER (python3)[856989]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:29 JKG-SERVER (python3)[857001]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:34 JKG-SERVER (python3)[857034]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:39 JKG-SERVER (python3)[857060]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:44 JKG-SERVER (python3)[857074]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:50 JKG-SERVER (python3)[857106]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:42:55 JKG-SERVER (python3)[857117]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:00 JKG-SERVER (python3)[857123]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:05 JKG-SERVER (python3)[857134]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:11 JKG-SERVER (python3)[857144]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:16 JKG-SERVER (python3)[857153]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:21 JKG-SERVER (python3)[857164]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:26 JKG-SERVER (python3)[857173]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:32 JKG-SERVER (python3)[857180]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:37 JKG-SERVER (python3)[857189]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:42 JKG-SERVER (python3)[857195]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:47 JKG-SERVER (python3)[857204]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:53 JKG-SERVER (python3)[857214]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:43:58 JKG-SERVER (python3)[857236]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:03 JKG-SERVER (python3)[857244]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:08 JKG-SERVER (python3)[857253]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:14 JKG-SERVER (python3)[857260]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:19 JKG-SERVER (python3)[857269]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:24 JKG-SERVER (python3)[857284]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:29 JKG-SERVER (python3)[857293]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:35 JKG-SERVER (python3)[857301]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:40 JKG-SERVER (python3)[857309]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:45 JKG-SERVER (python3)[857315]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:50 JKG-SERVER (python3)[857322]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:44:56 JKG-SERVER (python3)[857334]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:01 JKG-SERVER (python3)[857395]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:06 JKG-SERVER (python3)[857410]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:11 JKG-SERVER (python3)[857418]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:17 JKG-SERVER (python3)[857427]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:22 JKG-SERVER (python3)[857433]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:27 JKG-SERVER (python3)[857446]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:32 JKG-SERVER (python3)[857459]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:37 JKG-SERVER (python3)[857595]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:43 JKG-SERVER (python3)[857601]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:48 JKG-SERVER (python3)[857609]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:53 JKG-SERVER (python3)[857616]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:45:58 JKG-SERVER (python3)[857639]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:04 JKG-SERVER (python3)[857648]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:09 JKG-SERVER (python3)[857656]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:14 JKG-SERVER (python3)[857664]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:19 JKG-SERVER (python3)[857673]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:25 JKG-SERVER (python3)[857679]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:30 JKG-SERVER (python3)[857692]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:35 JKG-SERVER (python3)[857700]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:40 JKG-SERVER (python3)[857709]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:46 JKG-SERVER (python3)[857715]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:51 JKG-SERVER (python3)[857724]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:46:56 JKG-SERVER (python3)[857732]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:01 JKG-SERVER (python3)[857756]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:07 JKG-SERVER (python3)[857762]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:12 JKG-SERVER (python3)[857774]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:17 JKG-SERVER (python3)[857781]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:22 JKG-SERVER (python3)[857790]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:28 JKG-SERVER (python3)[857796]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:33 JKG-SERVER (python3)[857810]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:38 JKG-SERVER (python3)[857817]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:43 JKG-SERVER (python3)[857826]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:49 JKG-SERVER (python3)[857848]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:54 JKG-SERVER (python3)[857857]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:47:59 JKG-SERVER (python3)[857865]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:04 JKG-SERVER (python3)[857890]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:10 JKG-SERVER (python3)[857896]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:15 JKG-SERVER (python3)[857907]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:20 JKG-SERVER (python3)[857913]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:25 JKG-SERVER (python3)[857920]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:31 JKG-SERVER (python3)[857928]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:36 JKG-SERVER (python3)[857937]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:41 JKG-SERVER (python3)[857949]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:46 JKG-SERVER (python3)[857955]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:51 JKG-SERVER (python3)[857965]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:48:57 JKG-SERVER (python3)[857972]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:02 JKG-SERVER (python3)[857982]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:07 JKG-SERVER (python3)[858000]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:12 JKG-SERVER (python3)[858010]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:18 JKG-SERVER (python3)[858018]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:23 JKG-SERVER (python3)[858026]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:28 JKG-SERVER (python3)[858032]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:33 JKG-SERVER (python3)[858042]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:39 JKG-SERVER (python3)[858055]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:44 JKG-SERVER (python3)[858070]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:49 JKG-SERVER (python3)[858076]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:49:54 JKG-SERVER (python3)[858087]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:00 JKG-SERVER (python3)[858093]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:05 JKG-SERVER (python3)[858151]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:10 JKG-SERVER (python3)[858170]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:15 JKG-SERVER (python3)[858180]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:21 JKG-SERVER (python3)[858189]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:26 JKG-SERVER (python3)[858195]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:31 JKG-SERVER (python3)[858203]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:36 JKG-SERVER (python3)[858344]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:42 JKG-SERVER (python3)[858358]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:47 JKG-SERVER (python3)[858368]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:52 JKG-SERVER (python3)[858377]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:50:57 JKG-SERVER (python3)[858385]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:03 JKG-SERVER (python3)[858395]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:08 JKG-SERVER (python3)[858402]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:13 JKG-SERVER (python3)[858422]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:18 JKG-SERVER (python3)[858430]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:24 JKG-SERVER (python3)[858439]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:29 JKG-SERVER (python3)[858445]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:34 JKG-SERVER (python3)[858455]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:39 JKG-SERVER (python3)[858462]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:45 JKG-SERVER (python3)[858472]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:50 JKG-SERVER (python3)[858482]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:51:55 JKG-SERVER (python3)[858492]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:00 JKG-SERVER (python3)[858501]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:06 JKG-SERVER (python3)[858509]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:11 JKG-SERVER (python3)[858522]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:16 JKG-SERVER (python3)[858537]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:21 JKG-SERVER (python3)[858545]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:26 JKG-SERVER (python3)[858551]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:31 JKG-SERVER (python3)[858562]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:37 JKG-SERVER (python3)[858569]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:42 JKG-SERVER (python3)[858578]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:52:45.527965,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:52:45.528024,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:52:45.528050,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:52:45.528079,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:52:45.528101,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]: [2025/12/15 17:52:45.528122,  0] source3/nmbd/nmbd_browsesync.c:355(find_domain_master_name_query_fail)
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   find_domain_master_name_query_fail:
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to find the Domain Master Browser name WORKGROUP<1b> for the workgroup WORKGROUP.
+dic 15 17:52:45 JKG-SERVER nmbd[1375]:   Unable to sync browse lists in this workgroup.
+dic 15 17:52:47 JKG-SERVER (python3)[858605]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:52 JKG-SERVER (python3)[858614]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:52:58 JKG-SERVER (python3)[858621]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:03 JKG-SERVER (python3)[858632]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:08 JKG-SERVER (python3)[858638]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:13 JKG-SERVER (python3)[858655]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:19 JKG-SERVER (python3)[858668]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:24 JKG-SERVER (python3)[858676]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:29 JKG-SERVER (python3)[858682]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:34 JKG-SERVER (python3)[858692]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:40 JKG-SERVER (python3)[858700]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:45 JKG-SERVER (python3)[858706]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:50 JKG-SERVER (python3)[858719]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:53:55 JKG-SERVER (python3)[858728]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:01 JKG-SERVER (python3)[858736]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:06 JKG-SERVER (python3)[858744]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:11 JKG-SERVER (python3)[858753]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:16 JKG-SERVER (python3)[858768]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:22 JKG-SERVER (python3)[858777]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:27 JKG-SERVER (python3)[858787]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:32 JKG-SERVER (python3)[858795]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:37 JKG-SERVER (python3)[858805]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:43 JKG-SERVER (python3)[859159]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:48 JKG-SERVER (python3)[859433]: odoo.service: Failed to determine user credentials: No such process
+dic 15 17:54:53 JKG-SERVER (python3)[859537]: odoo.service: Failed to determine user credentials: No such process
 
 
 ## NGINX (resumen)
@@ -869,7 +869,7 @@ Dnsmasq versión 2.90  Copyright (c) 2000-2024 Simon Kelley
 
 total 28
 drwxr-xr-x   2 root root  4096 dic 14 18:39 .
-drwxr-xr-x 139 root root 12288 dic 14 05:51 ..
+drwxr-xr-x 141 root root 12288 dic 15 17:54 ..
 -rw-r--r--   1 root root   140 dic 14 05:26 10-jkg.conf
 -rw-r--r--   1 root root   211 ene 14  2025 README
 -rw-r--r--   1 root root   222 dic 14 18:47 thejoseka-lan.conf
@@ -939,11 +939,11 @@ drwxr-xr-x 139 root root 12288 dic 14 05:51 ..
 
 # Add other name servers here, with domain specs if they are for
 # non-public domains.
-#server=/localnet/192.168.0.1
+#server=/localnet/[IP-REDACTED]
 
 # Example of routing PTR queries to nameservers: this will send all
-# address->name queries for 192.168.3/24 to nameserver 10.1.2.3
-#server=/3.168.192.in-addr.arpa/10.1.2.3
+# address->name queries for 192.168.3/24 to nameserver [IP-REDACTED]
+#server=/3.168.192.in-addr.arpa/[IP-REDACTED]
 
 # Add local-only domains here, queries in these domains are answered
 # from /etc/hosts or DHCP only.
@@ -972,13 +972,13 @@ drwxr-xr-x 139 root root 12288 dic 14 05:51 ..
 #nftset=/yahoo.com/6#ip#test#vpn6
 
 # You can control how dnsmasq talks to a server: this forces
-# queries to 10.1.2.3 to be routed via eth1
-# server=10.1.2.3@eth1
+# queries to [IP-REDACTED] to be routed via eth1
+# server=[IP-REDACTED]@eth1
 
 # and this sets the source (ie local) address used to talk to
-# 10.1.2.3 to 192.168.1.1 port 55 (there must be an interface with that
+# [IP-REDACTED] to [IP-REDACTED] port 55 (there must be an interface with that
 # IP on the machine, obviously).
-# server=10.1.2.3@192.168.1.1#55
+# server=[IP-REDACTED]@[IP-REDACTED]#55
 
 # If you want dnsmasq to change uid and gid to something other
 # than the default, edit the following lines.
@@ -1030,30 +1030,30 @@ drwxr-xr-x 139 root root 12288 dic 14 05:51 ..
 #domain=thekelleys.org.uk
 
 # Set a different domain for a particular subnet
-#domain=wireless.thekelleys.org.uk,192.168.2.0/24
+#domain=wireless.thekelleys.org.uk,[IP-REDACTED]/24
 
 # Same idea, but range rather then subnet
-#domain=reserved.thekelleys.org.uk,192.68.3.100,192.168.3.200
+#domain=reserved.thekelleys.org.uk,192.68.3.100,[IP-REDACTED]
 
 # Uncomment this to enable the integrated DHCP server, you need
 # to supply the range of addresses available for lease and optionally
 # a lease time. If you have more than one network, you will need to
 # repeat this for each network on which you want to supply DHCP
 # service.
-#dhcp-range=192.168.0.50,192.168.0.150,12h
+#dhcp-range=[IP-REDACTED],[IP-REDACTED],12h
 
 # This is an example of a DHCP range where the netmask is given. This
 # is needed for networks we reach the dnsmasq DHCP server via a relay
 # agent. If you don't know what a DHCP relay agent is, you probably
 # don't need to worry about this.
-#dhcp-range=192.168.0.50,192.168.0.150,255.255.255.0,12h
+#dhcp-range=[IP-REDACTED],[IP-REDACTED],255.255.255.0,12h
 
 # This is an example of a DHCP range which sets a tag, so that
 # some DHCP options may be set only for this network.
-#dhcp-range=set:red,192.168.0.50,192.168.0.150
+#dhcp-range=set:red,[IP-REDACTED],[IP-REDACTED]
 
 # Use this DHCP range only when the tag "green" is set.
-#dhcp-range=tag:green,192.168.0.50,192.168.0.150,12h
+#dhcp-range=tag:green,[IP-REDACTED],[IP-REDACTED],12h
 
 # Specify a subnet which can't be used for dynamic address allocation,
 # is available for hosts with matching --dhcp-host lines. Note that
@@ -1062,7 +1062,7 @@ drwxr-xr-x 139 root root 12288 dic 14 05:51 ..
 # In this case the netmask is implied (it comes from the network
 # configuration on the machine running dnsmasq) it is possible to give
 # an explicit netmask instead.
-#dhcp-range=192.168.0.0,static
+#dhcp-range=[IP-REDACTED],static
 
 # Enable DHCPv6. Note that the prefix-length does not need to be specified
 # and defaults to 64 if missing/
@@ -1097,7 +1097,7 @@ drwxr-xr-x 139 root root 12288 dic 14 05:51 ..
 
 --- /etc/dnsmasq.d/10-jkg.conf
 interface=eno1
-listen-address=192.168.1.193
+listen-address=[IP-REDACTED]
 bind-dynamic
 domain-needed
 bogus-priv
@@ -1108,8 +1108,8 @@ server=1.1.1.1
 server=1.0.0.1
 --- /etc/dnsmasq.d/thejoseka-lan.conf
 # Split-DNS LAN: apunta dominio a tu server (IPv4 + IPv6 LAN)
-host-record=odoo.thejoseka.com,192.168.1.193,fd87:7b42:69e:0:725a:fff:fe4a:bc13
-host-record=nube.thejoseka.com,192.168.1.193,fd87:7b42:69e:0:725a:fff:fe4a:bc13
+host-record=odoo.thejoseka.com,[IP-REDACTED],fd87:7b42:69e:0:725a:fff:fe4a:bc13
+host-record=nube.thejoseka.com,[IP-REDACTED],fd87:7b42:69e:0:725a:fff:fe4a:bc13
 
 
 ## Certbot / LetsEncrypt (lista)
@@ -1131,17 +1131,17 @@ drwxr-xr-x 2 root root 4096 nov 27 00:53 odoo.thejoseka.com
 ## Tailscale (estado)
 
 $ tailscale status 2>/dev/null || true; echo; tailscale ip -4 2>/dev/null || true; echo; tailscale ip -6 2>/dev/null || true
-100.113.186.105  jkg-server        naposikeit@        linux    idle; offers exit node                                        
-100.115.131.128  glsdb             naposikeit@        linux    offline, last seen 25d ago                                    
-100.77.6.95      iphone-elisabeth  elisabethgragera@  iOS      offline, last seen 6d ago                                     
-100.111.98.33    iphone-joseka     naposikeit@        iOS      active; relay "mad"; offline, last seen 2h ago, tx 5928 rx 0  
-100.107.204.42   jkg-taller        naposikeit@        linux    offline, last seen 17d ago                                    
-100.77.153.86    jkg               naposikeit@        windows  offline, last seen 21h ago                                    
-100.109.96.64    parrot            naposikeit@        linux    offline, last seen 2d ago                                     
-100.98.206.57    pepe              naposikeit@        windows  offline, last seen 2d ago                                     
-100.90.132.42    salon             naposikeit@        linux    active; direct 192.168.1.176:41641, tx 118188 rx 97316        
+[IP-REDACTED]  jkg-server        naposikeit@        linux    idle; offers exit node                                   
+[IP-REDACTED]  glsdb             naposikeit@        linux    offline, last seen 25d ago                               
+[IP-REDACTED]      iphone-elisabeth  elisabethgragera@  iOS      offline, last seen 6d ago                                
+[IP-REDACTED]    iphone-joseka     naposikeit@        iOS      offline, last seen 2h ago                                
+[IP-REDACTED]   jkg-taller        naposikeit@        linux    offline, last seen 17d ago                               
+[IP-REDACTED]    jkg               naposikeit@        windows  offline, last seen 22h ago                               
+[IP-REDACTED]    parrot            naposikeit@        linux    offline, last seen 2d ago                                
+[IP-REDACTED]    pepe              naposikeit@        windows  offline, last seen 2d ago                                
+[IP-REDACTED]    salon             naposikeit@        linux    active; direct [IP-REDACTED]:41641, tx 125716 rx 108132  
 
-100.113.186.105
+[IP-REDACTED]
 
 fd7a:115c:a1e0::3401:ba86
 
@@ -1218,7 +1218,7 @@ Server:
   /etc/cdi
   /var/run/cdi
  Swarm: inactive
- Runtimes: runc io.containerd.runc.v2
+ Runtimes: io.containerd.runc.v2 runc
  Default Runtime: runc
  Init Binary: docker-init
  containerd version: 1c4457e00facac03ce1d75f7b6777a7a851e5c41
@@ -1253,8 +1253,8 @@ Server:
 $ docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Ports}}" | sed -n '1,260p'
 NAMES                STATUS        IMAGE                              PORTS
 cloudflared-tunnel   Up 38 hours   cloudflare/cloudflared:2025.11.1   
-jkg-odoo-web         Up 43 hours   odoo:19                            127.0.0.1:8069->8069/tcp, 127.0.0.1:8072->8072/tcp, 8071/tcp
-jkg-odoo-db          Up 43 hours   postgres:15                        5432/tcp
+jkg-odoo-web         Up 44 hours   odoo:19                            127.0.0.1:8069->8069/tcp, 127.0.0.1:8072->8072/tcp, 8071/tcp
+jkg-odoo-db          Up 44 hours   postgres:15                        5432/tcp
 nextcloud_app        Up 2 days     nextcloud:29-apache                0.0.0.0:8082->80/tcp, [::]:8082->80/tcp
 nextcloud_db         Up 2 days     mariadb:10.11                      3306/tcp
 nextcloud_redis      Up 2 days     redis:alpine                       6379/tcp

@@ -1,19 +1,10 @@
-# Secrets / llaves / env
 .env
 *.env
 **/*.pem
 **/*.key
-**/*secret*
-**/*token*
-**/*passwd*
-**/*password*
 **/letsencrypt/**
 **/cloudflared/**
-
-# Dumps / backups grandes
 *.sql
 *.dump
 *.bak
-
-# EXCEPCIÓN: bundle explícitamente NO-SECRET
 !docs/configs/CONFIGS-NO-SECRET.tar.gz
