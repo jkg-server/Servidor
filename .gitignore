@@ -7,13 +7,16 @@ secrets/
 *.pem
 *.p12
 *.crt
+
 *.log
 *.tmp
 tmp/
 .cache/
+
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+
 dist/
 build/

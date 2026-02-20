@@ -7,7 +7,6 @@ CONF="${ROOT}/config/bootstrap.env"
 
 [[ "$DOCKER_ENABLE" == "1" ]] || { echo "ℹ️ Docker desactivado."; exit 0; }
 
-# Instalación estándar rápida (puedes cambiar a repo oficial si quieres más control)
 curl -fsSL https://get.docker.com | sh
 systemctl enable --now docker
 docker --version || true
