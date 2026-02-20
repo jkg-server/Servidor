@@ -1,0 +1,2 @@
+# Variables (bootstrap.env)
+SSH_PORT, UFW_ENABLE, FAIL2BAN_ENABLE, DOCKER_ENABLE, TAILSCALE_ENABLE, TS_AUTHKEY (opcional, NO versionar)
