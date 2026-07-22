@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jkg_melocoton_new_product_wizard,jkg.melocoton.new.product.wizard,model_jkg_melocoton_new_product_wizard,base.group_user,1,1,1,1
+access_jkg_melocoton_price_wizard,jkg.melocoton.price.wizard,model_jkg_melocoton_price_wizard,base.group_user,1,1,1,1
+access_jkg_melocoton_import_wizard,jkg.melocoton.import.wizard,model_jkg_melocoton_import_wizard,base.group_user,1,1,1,1
+access_jkg_melocoton_operation_log_read,jkg.melocoton.product.operation.log.read,model_jkg_melocoton_product_operation_log,base.group_user,1,0,0,0
+access_jkg_melocoton_operation_log_admin,jkg.melocoton.product.operation.log.admin,model_jkg_melocoton_product_operation_log,base.group_system,1,1,1,1
