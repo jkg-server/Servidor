@@ -1,87 +1,60 @@
-# Servidor · Bootstrap genérico seguro
+# Servidor · bootstrap público seguro
 
-Repositorio público para preparar una máquina Ubuntu/Debian desde cero con una base mínima, reproducible y sin datos de JKG-SERVER real.
+Bootstrap genérico para preparar una máquina Ubuntu o Debian con una base mínima y auditable. Este repositorio es público y no representa una copia de JKG-SERVER ni de ningún cliente.
 
-## Objetivo
+## Alcance
 
-Dejar un servidor limpio con:
-
-- Paquetes base de administración.
-- Firewall UFW opcional.
-- Fail2ban opcional.
-- Docker + Docker Compose opcional.
+- Paquetes básicos de administración.
+- UFW y Fail2ban opcionales.
+- Docker Engine y Docker Compose opcionales.
 - Tailscale opcional.
+- Comprobaciones de sintaxis, seguridad y frontera pública.
 
-## Límites de seguridad
-
-Este repositorio **no debe contener nunca**:
-
-- IPs reales de producción.
-- Dominios reales.
-- Credenciales.
-- Tokens.
-- Claves privadas.
-- Backups.
-- Ficheros `.env` reales.
-
-Lo específico de producción va en repositorios privados separados.
-
-## Relación con otros repositorios
-
-| Repo | Función |
-|---|---|
-| `Servidor` | Bootstrap genérico y público. |
-| `jkg-server-bootstrap` | Orquestador privado para una recuperación o alta nueva. |
-| `jkg-server-restore` | Manuales y utilidades de restauración controlada. |
-| `jkg-server-infra` | Infraestructura privada, plantillas y disaster-recovery saneado. |
+La infraestructura real, los módulos de clientes, las rutas de producción y los procedimientos internos se mantienen en repositorios privados separados.
 
 ## Uso rápido
 
 ```bash
 git clone https://github.com/jkg-server/Servidor.git
 cd Servidor
-cp config/bootstrap.env.example config/bootstrap.env
+mkdir -p config
+install -m 0600 templates/bootstrap.env.example config/bootstrap.env
+nano config/bootstrap.env
 sudo ./run.sh bootstrap
 ```
 
-## Ejecutar por fases
+UFW está desactivado en la plantilla para evitar bloquear un servidor remoto por una configuración SSH incorrecta. Actívalo solo después de revisar `SSH_PORT`.
+
+## Ejecución por fases
 
 ```bash
 sudo ./run.sh step init
 sudo ./run.sh step security
 sudo ./run.sh step docker
 sudo ./run.sh step tailscale
+./run.sh check
 ```
 
-## Configuración
+Cada ejecución escribe un registro local en `logs/`, ruta ignorada por Git.
 
-Edita `config/bootstrap.env` antes de ejecutar:
+## Validación del repositorio
 
 ```bash
-SSH_PORT=22
-UFW_ENABLE=1
-FAIL2BAN_ENABLE=1
-DOCKER_ENABLE=1
-TAILSCALE_ENABLE=0
-TS_AUTHKEY=
-TS_EXTRA_ARGS=
+bash tools/validate.sh
 ```
 
-## Validación posterior
+La validación comprueba sintaxis Bash, ShellCheck cuando está instalado y la frontera pública: no admite despliegues de clientes, copias de seguridad, volcados, archivos de configuración empaquetados ni `.env` reales.
 
-```bash
-systemctl status docker --no-pager || true
-systemctl status fail2ban --no-pager || true
-ufw status verbose || true
-docker --version || true
-docker compose version || true
-tailscale status || true
-```
+## Relación con los repositorios privados
 
-## Criterio de diseño
+| Repositorio | Función |
+|---|---|
+| `Servidor` | Bootstrap público, genérico y sin datos reales. |
+| `jkg-server-bootstrap` | Orquestación privada de altas y recuperación. |
+| `jkg-server-restore` | Runbooks y utilidades de restauración controlada. |
+| `jkg-server-infra` | Infraestructura saneada y documentación canónica privada. |
+| `jkg-server-jkg-odoo-addons` | Addons Odoo propios y específicos, siempre privado. |
 
-- Seguro por defecto.
-- Idempotente cuando sea razonable.
-- Sin secretos.
-- Sin datos de clientes.
-- Fácil de leer, auditar y repetir.
+## Regla de seguridad
+
+No se aceptan secretos, credenciales, tokens, claves privadas, `.env` reales, copias de seguridad, volcados SQL, datos de clientes, dominios o direcciones reales de producción. Consulta [SECURITY.md](SECURITY.md) y [la política pública](docs/PUBLIC_REPOSITORY_POLICY.md).

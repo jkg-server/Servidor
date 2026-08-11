@@ -1,12 +1,15 @@
-# Réplica rápida (PÚBLICO)
+# Réplica rápida
 
-Objetivo: tener una guía para reconstruir el servidor **sin exponer secretos**.
+Este repositorio prepara el sistema base; no restaura aplicaciones ni datos reales.
 
-## Pasos (alto nivel)
-1. Provisionar Ubuntu LTS + usuario admin.
-2. Instalar Nginx + Docker (si aplica) + dependencias base.
-3. Restaurar estructura de vhosts (sin puertos/secretos aquí).
-4. En entorno real: aplicar la Biblia privada (puertos, upstreams, rutas, servicios).
-5. Validación: `nginx -t` y test por dominios.
+## Orden seguro
 
-> Los detalles exactos (puertos internos, upstreams, rutas sensibles) están en el repo privado.
+1. Instalar un sistema operativo compatible y crear un usuario administrador.
+2. Revisar `bootstrap.env` y ejecutar el bootstrap por fases.
+3. Verificar SSH antes de activar UFW.
+4. Recuperar la infraestructura desde repositorios privados y copias verificadas.
+5. Restaurar datos siguiendo el runbook privado correspondiente.
+6. Validar cada servicio antes de publicar tráfico.
+7. Documentar el punto estable y el rollback.
+
+No uses este repositorio como sustituto de una copia de seguridad.
